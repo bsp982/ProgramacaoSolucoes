@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+
         //Exercicio 1 Faça um Programa que mostre a mensagem "Alo mundo" na tela.
         exercicio1();
 
@@ -20,6 +21,33 @@ public class Main {
 
         //Exercicio 5 Faça um Programa que converta metros para centímetros.
         exercicio5(entrada);
+
+        //Exercicio 6 Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
+        exercicio6(entrada);
+        
+        //Exercicio 7 Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+        exercicio7(entrada);
+
+    }
+
+    private static void exercicio7(Scanner entrada) {
+        System.out.println("Digite o valor da lateral do quadrado: ");
+        float lado = entrada.nextFloat();
+        System.out.println("O dobro da area do quadrado eh de: " + ((lado * lado) * 2) );
+    }
+
+    private static void exercicio6(Scanner entrada) {
+
+        double raio;
+        double area;
+        final double PI = 3.1416;
+
+        System.out.println("Escreva o valor do raio");
+        raio = entrada.nextFloat();
+        area  = PI* (raio*raio);
+
+        System.out.print("O valor da area é " + area);
+        System.out.print(area);
     }
 
     private static void exercicio5(Scanner entrada) {
