@@ -24,16 +24,53 @@ public class Main {
 
         //Exercicio 6 Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
         exercicio6(entrada);
-        
+
         //Exercicio 7 Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
         exercicio7(entrada);
+
+        //Exercicio8 Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
+        exercicio8(entrada);
+
+        //Exercicio9 Faça um Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius.
+        //C = 5 * ((F-32) / 9).
+        exercicio9(entrada);
+
+
+        exercicio17(entrada);
+    }
+
+    private static void exercicio17(Scanner entrada) {
+
+    }
+
+    private static void exercicio9(Scanner entrada) {
+        double celsius, fahrenheit;
+
+        System.out.print("Conversor de temperatura: Graus Celsios -> Fahrenheit\n\n"); //Pronto, bem mais simples!
+
+
+        System.out.print("Digite a temperatura em Celsius: ");
+        celsius = entrada.nextDouble();
+
+        fahrenheit = (9 * celsius + 160) / 5;
+
+        System.out.print("\n A medida convertida é " + fahrenheit + "ºF\n");
+    }
+
+    private static void exercicio8(Scanner entrada) {
+        System.out.println("Digite o valor da sua hora de trabalho: ");
+        float valordahora = entrada.nextFloat();
+        System.out.println("Digite quantas horas voce trabalha por dia: ");
+        int horastrabalhadas = entrada.nextInt();
+        int quantidadededias = 22; //estimativa de dias úteis em um mês
+        System.out.printf("O seu salario, em um mes, eh de: %.2f", (valordahora * horastrabalhadas) * quantidadededias);
 
     }
 
     private static void exercicio7(Scanner entrada) {
         System.out.println("Digite o valor da lateral do quadrado: ");
         float lado = entrada.nextFloat();
-        System.out.println("O dobro da area do quadrado eh de: " + ((lado * lado) * 2) );
+        System.out.println("O dobro da area do quadrado eh de: " + ((lado * lado) * 2));
     }
 
     private static void exercicio6(Scanner entrada) {
@@ -44,7 +81,7 @@ public class Main {
 
         System.out.println("Escreva o valor do raio");
         raio = entrada.nextFloat();
-        area  = PI* (raio*raio);
+        area = PI * (raio * raio);
 
         System.out.print("O valor da area é " + area);
         System.out.print(area);
@@ -56,7 +93,7 @@ public class Main {
 
         float centimetros = metros * 100;
 
-        System.out.printf("%.1f cm",centimetros);
+        System.out.printf("%.1f cm", centimetros);
     }
 
     private static void exercicio4(Scanner entrada) {
