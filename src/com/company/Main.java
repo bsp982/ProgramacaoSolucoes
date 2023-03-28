@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        //Exercicio 1 Faça um Programa que mostre a mensagem "Alo mundo" na tela.
+        // Exercicio 1 Faça um Programa que mostre a mensagem "Alo mundo" na tela.
         exercicio1();
 
         //Exercicio 2 Faça um Programa que peça um número e então mostre a mensagem O número informado foi [número].
@@ -35,11 +35,24 @@ public class Main {
         //C = 5 * ((F-32) / 9).
         exercicio9(entrada);
 
-
+        //Exercicio10
+        // Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a
+        // ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+        //Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
+        //comprar apenas latas de 18 litros;
+        //comprar apenas galões de 3,6 litros;
+        //misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
         exercicio17(entrada);
     }
 
     private static void exercicio17(Scanner entrada) {
+        System.out.print("Digite a area em M2 que será pintada?  ");
+        int area = entrada.nextInt();
+        double litros = area / 3;
+        double quantidadeLatas = Math.ceil(litros / 18);
+        double valorFinal = quantidadeLatas * 80;
+        System.out.println("Quantidade de Latas: " + quantidadeLatas);
+        System.out.println("R$ " + valorFinal);
 
     }
 
