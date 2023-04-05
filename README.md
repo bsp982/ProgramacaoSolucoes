@@ -1,4 +1,7 @@
-# Lista de Exercicios de Programação e Soluções;
+# Repositorio da Aula de Programa e Soluções;
 
-Caso queira saber minhas experiencias,este é meu linkedin;
+Bruno Santos Pereira   
+RA:201921666
+
+Caso queira saber minhas experiencias,este é meu linkedin;   
 https://www.linkedin.com/in/bruno-pereira-4450a4160/

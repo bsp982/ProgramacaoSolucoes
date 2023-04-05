@@ -28,7 +28,6 @@ public class Aula4abril {
                 exercicio4(entrada);
                 break;
         }
-
     }
 
     private static void exercicio4(Scanner entrada) {
@@ -52,7 +51,7 @@ public class Aula4abril {
         System.out.println("Digite o nacionalidade: ");
         String nacionalidade = entrada.next();
         System.out.println("Digite a idade: ");
-        Integer idade = entrada.nextInt();
+        int idade = entrada.nextInt();
 
 
         System.out.println("Deseja visualizar dados completos");
@@ -64,7 +63,7 @@ public class Aula4abril {
             System.out.println("Nome: " + nome);
             System.out.println("Sobrenome: " + sobrenome);
             System.out.println("Nacionalidade: " + nacionalidade);
-            System.out.println("Idade: " + idade.toString());
+            System.out.println("Idade: " + idade);
         }
 
     }
@@ -132,7 +131,6 @@ public class Aula4abril {
             System.out.println(A);
         }
     }
-
 
     private static void exercicio1(Scanner entrada) {
         System.out.println("Exercicio 1: \n");
