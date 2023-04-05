@@ -1,6 +1,6 @@
 package com.company.ExerciciosFlavio;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Aula4abril {
     public static void executarLista() {
