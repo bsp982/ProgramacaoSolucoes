@@ -6,12 +6,10 @@ public class Aula4abril {
     public static void executarLista() {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Qual exercicio deseja executar? \n");
-
         System.out.print("Exercicio 1\n");
         System.out.print("Exercicio 2\n");
         System.out.print("Exercicio 3\n");
         System.out.print("Exercicio 4\n");
-
         int numeroExercicioDigitado = entrada.nextInt();
 
         switch (numeroExercicioDigitado) {
@@ -27,7 +25,62 @@ public class Aula4abril {
             case 4:
                 exercicio4(entrada);
                 break;
+            case 5:
+                exercicio5(entrada);
+                break;
+            case 6:
+                exercicio6(entrada);
+                break;
+            case 7:
+                exercicio7(entrada);
+                break;
+            case 9:
+                exercicio9(entrada);
+                break;
+
+            default:
+                System.out.print("Exercicio não existente");
         }
+    }
+
+    private static void exercicio9(Scanner entrada) {
+
+        //        9. Faça um programa que receba o valor da venda, escolha a
+//        condição de pagamento no menu e mostre o total da venda final
+//        conforme condições a seguir:
+//        Venda a Vista - desconto de 10%
+//                Venda a Prazo 30 dias - desconto de 5%
+//                Venda a Prazo 60 dias - mesmo preço
+//        Venda a Prazo 90 dias - acréscimo de 5%
+//                Venda com cartão de débito - desconto de 8%
+//                Venda com cartão de crédito - desconto de 7%
+    }
+
+    private static void exercicio7(Scanner entrada) {
+        //        7. Crie um programa que lê um número entre 1 e 12, correspondendo
+//        a um dos meses do ano onde o mês 1 é Janeiro e 12 é dezembro.
+//        Ao final, o programa deve imprimir uma mensagem identificando,
+//                com base no número digitado, o nome do mês e a estação.
+//        Exemplo para o mês 1: "Mês: Janeiro – Estação: Verão"
+    }
+
+    private static void exercicio6(Scanner entrada) {
+        //        6. Faça um programa calcula o total de uma hospedagem em um
+//        hotel. Ele cobra R$ 60.00 a diária e mais uma taxa de serviço:
+//        R$ 5.50 por diária, se o número de diárias for maior que 15;
+//        R$ 6.00 por diária, se o número de diárias for igual a 15;
+//        R$ 8.00 por diária, se o número de diárias for menor que 15.
+    }
+
+    private static void exercicio5(Scanner entrada) {
+        //        5. Faça um programa para imprimir o conceito de um aluno. O
+//        conceito é calculado em função da nota do aluno que varia de 0
+//        a 100. As faixas da correlação são mostradas abaixo:
+//        Nota Conceito
+//        0 a 49 Insuficiente
+//        50 a 64 Regular
+//        65 a 84 Bom
+//        85 100 Ótimo
     }
 
     private static void exercicio4(Scanner entrada) {

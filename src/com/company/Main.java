@@ -12,7 +12,6 @@ public class Main {
         /**
          * Exercicio em Grupo Aula do dia 4/4/2022
          * **/
-
         Aula4abril.executarLista();
 
 
