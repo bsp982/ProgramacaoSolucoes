@@ -1,5 +1,7 @@
 package com.company.ListaEstruturaSequencial;
 
+import java.text.DecimalFormat;
+import java.text.MessageFormat;
 import java.util.Scanner;
 
 public class EstruturaSequencial {
@@ -51,37 +53,186 @@ public class EstruturaSequencial {
             case 7:
                 exercicio7(entrada);
                 break;
-
             case 8:
                 exercicio8(entrada);
                 break;
-
             case 9:
                 exercicio9(entrada);
                 break;
             case 10:
+                exercicio10(entrada);
                 break;
             case 11:
+                exercicio11(entrada);
                 break;
             case 12:
+                exercicio12(entrada);
                 break;
             case 13:
+                exercicio13(entrada);
                 break;
             case 14:
+                exercicio14(entrada);
                 break;
             case 15:
+                exercicio15(entrada);
                 break;
 
             case 16:
+                exercicio16(entrada);
                 break;
 
             case 17:
                 exercicio17(entrada);
                 break;
+            case 18:
+                exercicio18(entrada);
+                break;
 
             default:
                 System.out.print("Exercicio não existente  ");
         }
+    }
+
+    private static void exercicio12(Scanner entrada) {
+        DecimalFormat dt = new DecimalFormat("#.##");
+
+        System.out.print("Digite sua altura: ");
+        double h = entrada.nextDouble();
+
+        double calc = (72.7*h) - 58;
+
+        String res = MessageFormat.format("Seu peso ideal é {0}Kg",dt.format(calc));
+
+        System.out.println(res);
+    }
+
+    private static void exercicio11(Scanner entrada) {
+
+        System.out.print("Digite um numero: ");
+        int a = entrada.nextInt();
+
+        System.out.print("Digite outro numero: ");
+        int b = entrada.nextInt();
+
+        System.out.print("Digite mais um numero: ");
+        double c = entrada.nextDouble();
+
+
+        String res1 = MessageFormat.format("o produto do dobro do primeiro com metade do segundo é {0}",(2*a)+(b/2));
+
+        String res2 = MessageFormat.format("a soma do triplo do primeiro com o terceiro é {0}",3*a+c);
+
+        String res3 = MessageFormat.format("o terceiro elevado ao cubo é {0}",(c*c*c));
+
+        System.out.println(res1);
+        System.out.println(res2);
+        System.out.println(res3);
+    }
+
+    private static void exercicio10(Scanner entrada) {
+        System.out.print("Digite uma valor em graus celsius: ");
+        double c = entrada.nextDouble();
+        double calc = 1.8 * c + 32;
+
+        String res = MessageFormat.format("O valor convertido em Fahrenheit é {0}°", calc);
+
+        System.out.println(res);
+    }
+
+    private static void exercicio13(Scanner entrada) {
+        DecimalFormat dt = new DecimalFormat("#.##");
+        double calc;
+
+        System.out.print("Digite sua altura: ");
+        double h = entrada.nextDouble();
+
+        System.out.print("Digite seu sexo (M/F): ");
+        String sexo = entrada.next();
+
+        calc = sexo.equals("F") ? (62.1 * h) - 44.7 : (72.7 * h) - 58;
+
+        String res = MessageFormat.format("Seu peso ideal é {0}Kg", dt.format(calc));
+
+        System.out.println(res);
+    }
+
+    private static void exercicio14(Scanner entrada) {
+        int peso = entrada.nextInt();
+        int calc_multa;
+        String res = "Vocé não excedeu o peso limite";
+
+        if (peso > 50) {
+            calc_multa = peso - 50;
+
+            res = MessageFormat.format("Sua multa por exceder o limite é {0}R$", calc_multa * 4.00);
+        }
+
+        System.out.println(res);
+    }
+
+    private static void exercicio15(Scanner entrada) {
+        DecimalFormat dt = new DecimalFormat("#.##");
+
+        System.out.print("digite o quanto ganha por hora: ");
+        double numero = entrada.nextDouble();
+
+        System.out.print("digite o numero de horas trabalhadas: ");
+        double horas = entrada.nextDouble();
+
+        double salario_bruto = (numero * horas);
+
+        String res1 = MessageFormat.format("+ Salário Bruto : R${0}", dt.format(salario_bruto));
+        String res2 = MessageFormat.format("- IR (11%) : R${0}", dt.format(salario_bruto * 11 / 100));
+        String res3 = MessageFormat.format("- INSS (8%) : R${0}", dt.format(salario_bruto * 8 / 100));
+        String res4 = MessageFormat.format("- Sindicato ( 5%) : R${0}", dt.format(salario_bruto * 5 / 100));
+        String res5 = MessageFormat.format("= Salário Liquido : R${0}", dt.format(salario_bruto - salario_bruto * 24 / 100));
+
+        System.out.println(res1);
+        System.out.println(res2);
+        System.out.println(res3);
+        System.out.println(res4);
+        System.out.println(res5);
+    }
+
+    private static void exercicio16(Scanner entrada) {
+        double calc;
+        int quantidade_tinta;
+        System.out.println("Digite um valor em m²: ");
+        double area = entrada.nextDouble();
+
+        calc = (area / 3) / 18;
+
+        quantidade_tinta = (int) calc;
+
+        if ((area / 3) % 18 != 0) {
+            quantidade_tinta = (int) ((area / 3) / 18 + 1);
+        }
+
+
+        String tot_tinta = MessageFormat.format("Total de tintas compradas: {0}", quantidade_tinta);
+        String tot_dinheiro = MessageFormat.format("Valor total é {0}R$", new DecimalFormat("#.##").format(quantidade_tinta * 80.00));
+
+        System.out.println(tot_tinta);
+        System.out.println(tot_dinheiro);
+    }
+
+    private static void exercicio18(Scanner entrada) {
+        System.out.print("Digite o tamanho de um arquivo: ");
+
+        System.out.print("Digite a velocidade do link: ");
+        double arq_size = entrada.nextDouble();
+
+        double link_internet = entrada.nextDouble();
+
+        double calc = arq_size * 8 / link_internet;
+
+        double minutos = calc / 60;
+
+        String res = MessageFormat.format("Vai demorar {0} min ", (int) minutos);
+
+        System.out.println(res);
+
     }
 
     private static void exercicio17(Scanner entrada) {
